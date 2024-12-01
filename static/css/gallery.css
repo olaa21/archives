@@ -1,0 +1,27 @@
+.filter-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filter-button {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-button.active {
+    background-color: #000102;
+    color: white;
+}
+
+.filter-button:hover {
+    background-color: #ddd;
+}
+
+.gallery figure {
+    display: none; /* All figures hidden by default */
+}

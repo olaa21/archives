@@ -1,0 +1,113 @@
+{
+    "index": {
+        "title": "Welcome to My Blog",
+        "description": "Explore my passion for music, art, and creative technologies.",
+        "featured_image": "static/images/home_banner.jpg"
+    },
+    "interests": {
+        "title": "Interests",
+        "description": "Dive into my favorite explorations in sound, design and others.",
+        "images": [
+            {
+                "src": "static/images/interests_001.jpg",
+                "alt": "Design: Image from the Syrian Design Archive",
+                "caption": "Syrian Design Archive",
+                "detail": "The Syrian Design Archive is a collective of designers preserving art and design from Syria and the Middle East."
+            },
+            {
+                "src": "static/images/interests_002.jpg",
+                "alt": "Data/ Journalism: A concert crowd illuminated by vibrant stage lights.",
+                "caption": "The energy of live music.",
+                "detail": "An energetic crowd enjoying a live performance under vibrant stage lighting."
+            },
+            {
+                "src": "static/images/interests_003.jpg",
+                "alt": "Data/ Journalism: A sleek modern logo design.",
+                "caption": "A minimalist logo concept.",
+                "detail": "This project involved creating a clean and modern logo for a tech startup."
+            },
+            {
+                "src": "static/images/interests_004.jpg",
+                "alt": "Data/ Journalism: A colorful digital illustration.",
+                "caption": "Digital art experiment.",
+                "detail": "An experiment in blending vibrant colors to create unique digital illustrations."
+            },
+            {
+                "src": "static/images/interests_005.jpg",
+                "alt": "Data/ Journalism: A user interface wireframe for a mobile app.",
+                "caption": "UI Wireframe for a fitness app.",
+                "detail": "A wireframe design showcasing intuitive navigation for a fitness app concept."
+            },
+            {
+                "src": "static/images/interests_006.jpg",
+                "alt": "Design: A typography-focused poster design.",
+                "caption": "Typography in motion.",
+                "detail": "A poster design experiment focusing on the dynamic use of typography."
+            },
+            {
+                "src": "static/images/interests_007.jpg",
+                "alt": "Music: A packaging design for a luxury product.",
+                "caption": "Luxury packaging design.",
+                "detail": "A concept for eco-friendly yet luxurious packaging for high-end products."
+            },
+            {
+                "src": "static/images/interests_008.jpg",
+                "alt": "Music: An infographic about sustainability.",
+                "caption": "Sustainability infographic.",
+                "detail": "An infographic explaining sustainability practices through engaging visuals."
+            }
+        ]
+    },
+    "data_insights": {
+        "title": "Data Insights",
+        "description": "Data for design.",
+        "images": [
+            {
+                "src": "static/images/data_001.jpg",
+                "alt": "A bar chart showing trends over time.",
+                "caption": "Visualizing trends.",
+                "detail": "A data visualization showcasing trends in design practices."
+            },
+            {
+                "src": "static/images/data_002.jpg",
+                "alt": "A heat map representing global patterns.",
+                "caption": "Global patterns.",
+                "detail": "A heat map highlighting global patterns in art and technology."
+            }
+        ]
+    },
+    "work": {
+        "title": "My Work",
+        "description": "Creative Technology and Product Design.",
+        "images": [
+            {
+                "src": "static/images/work_001.jpg",
+                "alt": " A Limited dexterity knife.",
+                "caption": "Limited dexterity knifw.",
+                "detail": "An intricate artifact from a past civilization, displayed in a museum."
+            },
+            {
+                "src": "static/images/work_002.jpg",
+                "alt": "A image of an exhibition.",
+                "caption": "Colour and Culture Sonification.",
+                "detail": "This painting captures the intensity and detail of historical battles."
+            },
+            {
+                "src": "static/images/work_003.jpg",
+                "alt": " A toy design.",
+                "caption": "Texture Teddy.",
+                "detail": "An intricate artifact from a past civilization, displayed in a museum."
+            }
+        ]
+    },
+    "about": {
+        "title": "About Me",
+        "description": "Hailing from Lagos Nigeria, my name is Oyinkan [o-yi(n)-co(n)] Ifidon-Ola. Currently double majoring in Design and Information Analysis, my driving force is understanding people, having empathy towards the challenges they are presented with, and helping them find solutions through intuitive design and insightful interaction. I hope to create culturally impactful work that improves the world we live in.",
+        "images": [
+            {
+                "src": "static/images/about_001.jpg",
+                "alt": "Image of Oyinkan Ifidon-Ola."
+            }
+        ]
+    }
+}

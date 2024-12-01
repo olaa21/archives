@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ content['title'] }}</title>
+    <link rel="stylesheet" href="../static/css/aboutstyle.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="/">Home</a>
+                <a href="/interests">Interests</a>
+                <a href="/work">Work</a>
+                <a href="/data_insights">Data Insights</a>
+                <a href="/about">About</a>
+            </div>
+            <div class="nav-right">
+                <p class="name">oyinkan ifidon-ola</p>
+                <p class="pronunciation">o-yi(n)-co(n) ifidon-ola</p>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <h1>{{ content['title'] }}</h1>
+        <p>{{ content['description'] }}</p>
+        <div class="gallery">
+            {% for image in content['images'] %}
+            <figure data-category="{{ image['alt'].split(':')[0].strip() | lower }}">
+                <img 
+                    src="{{ image['src'] }}" 
+                    alt="{{ image['caption'] | e }}" 
+                    onclick="openLightbox('{{ image['src'] | e }}', '{{ image['caption'] | e }}', '{{ image['detail'] | e }}')"
+                
+>            </figure>
+            {% endfor %}
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ content['title'] }}</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/interests">Interests</a>
+            <a href="/work">Work</a>
+            <a href="/data_insights">Data Insights</a>
+            <a href="/about">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>{{ content['title'] }}</h1>
+        <p>{{ content['description'] }}</p>
+        
+        <div class="gallery">
+            {% for image in content['images'] %}
+            <figure data-category="{{ image['alt'].split(':')[0].strip() | lower }}">
+                <img 
+                    src="{{ image['src'] }}" 
+                    alt="{{ image['caption'] | e }}" 
+                    onclick="openLightbox('{{ image['src'] | e }}', '{{ image['caption'] | e }}', '{{ image['detail'] | e }}')"
+                
+>            </figure>
+            {% endfor %}
+        </div>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox-outer-container" onclick="closeLightbox()">
+            <div class="lightbox-inner-container" onclick="event.stopPropagation()">
+              <button class="lightbox-prev" onclick="navigateLightbox(-1)">&#10094;</button>
+              <img id="lightbox-image" alt="Lightbox Image">
+              <div id="lightbox-caption"></div>
+              <!-- <button class="lightbox-next" onclick="navigateLightbox(1)">&#10095;</button> -->
+              <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+    <script src="../static/js/lightbox.js"></script>
+    <script src="../static/js/gallery.js"></script>
+
+</body>
+</html>

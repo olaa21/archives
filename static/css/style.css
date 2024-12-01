@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px dotted #ddd;
+    padding: 20px 30px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: left; /* Center align navigation links */
+    padding: 10px;
+    gap: 10px; /* Add space between links */
+    background-color: #fff;
+    border-bottom: 1px dotted #ddd;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    border: 1px dotted #000;
+    padding: 11px 12px 11px 12px;
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+h1{
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+
+/* Gallery Style */
+.gallery {
+    display: grid; /* Use CSS Grid */
+    gap: 10px; /* Space between grid items */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    padding: 1rem; /* Add padding around the gallery */
+    width: 100%; /* Allow gallery to take full width */
+}
+
+/* Image Container */
+.image-container {
+    position: relative;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: white;
+}
+
+/* Image Styling */
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Ensures images fit nicely */
+}
+
+/* Caption Styling */
+.caption {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+  
+ /* Lightbox Outer Container */
+.lightbox-outer-container {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(218, 50, 50, 0.8); /* Dark transparent background */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Lightbox Inner Container */
+  .lightbox-inner-container {
+    position: fixed;
+    top: 25%;
+    left: 3.5%;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    overflow: hidden;
+    text-align: center;
+    object-position: center;
+    padding: 10px 10px 10px 10px;
+    overflow-y: auto;
+  }
+  
+  /* Lightbox Image */
+  #lightbox-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 760px) {
+    .lightbox-inner-container {
+        left: 7%;
+      
+    }
+  
+    #lightbox-caption {
+      font-size: 14px;
+    }
+
+  }
+  @media (min-width: 1000px) {
+    .lightbox-inner-container {
+        /* Layout for larger screens */
+        width: 80%; /* Constrain width */
+        height: 65%; /* Fixed height to display full image */
+        max-width: 1200px; /* Prevent excessive width */
+        max-height: none; /* Height is fixed */
+        display: flex;
+        flex-direction: row; /* Arrange content side-by-side */
+        gap: 20px;
+        text-align: left;
+    }
+
+    /* Image takes up the left side */
+    .lightbox-inner-container img {
+        width: 50%; /* Half of the lightbox width */
+        height: 100%; /* Stretch to full container height */
+        object-fit: contain; /* Ensure the image fits without distortion */
+    }
+
+    /* Text on the right side */
+    #lightbox-caption {
+        width: 50%; /* Take up the remaining half */
+        overflow-y: auto; /* Scroll if the text overflows */
+        padding: 30px; /* Add some spacing */
+    }
+}
+  
+  
+  /* Navigation Buttons */
+  .lightbox-prev,
+  .lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 1001;
+  }
+  
+  .lightbox-prev {
+    left: 10px;
+  }
+  
+  .lightbox-next {
+    right: 10px;
+  }
+  
+  /* Close Button */
+  .lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: rgb(197, 4, 4);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1002;
+  }
+  
+  
